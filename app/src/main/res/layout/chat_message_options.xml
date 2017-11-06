@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatmsg_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chatmsg_options_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_copy"
+        style="@style/chatmsg_option_item"
+        android:padding="6dp"
+        android:text="@string/copy" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="fill_parent"
+        android:alpha="0.6"
+        android:background="@color/linecolor" />
+
+    <TextView
+        android:id="@+id/tv_forward"
+        style="@style/chatmsg_option_item"
+        android:padding="6dp"
+        android:text="@string/forward" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="fill_parent"
+        android:alpha="0.6"
+        android:background="@color/linecolor"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        style="@style/chatmsg_option_item"
+        android:padding="6dp"
+        android:text="@string/delete"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="fill_parent"
+        android:alpha="0.6"
+        android:background="@color/linecolor"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_more"
+        style="@style/chatmsg_option_item"
+        android:padding="6dp"
+        android:text="@string/more"
+        android:visibility="visible" />
+</LinearLayout>

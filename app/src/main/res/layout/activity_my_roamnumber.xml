@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color">
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/roamCloudNumber"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_roam_cloudnumber" />
+
+    <View
+        style="@style/lineHorizontalStyle"
+        android:layout_marginTop="@dimen/submit_marginTop" />
+
+    <TextView
+        android:id="@+id/tv_remainTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/ic_remainder"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/remainTime"
+        android:textColor="@color/black"
+        android:textSize="@dimen/smaller_text_size" />
+
+    <View
+        style="@style/lineHorizontalStyle"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_roamPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/ic_roam_chinanumber"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/roamChinaNumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/smaller_text_size" />
+
+    <View
+        style="@style/lineHorizontalStyle"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_effectdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/ic_package"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/effectDate"
+        android:textColor="@color/black"
+        android:textSize="@dimen/smaller_text_size" />
+
+    <View
+        style="@style/lineHorizontalStyle"
+        android:layout_marginLeft="40dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_call_transfer"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/originalNumberRecieve"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:id="@+id/tv_setTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:text="@string/immediatelySet"
+            android:textColor="@color/roam_color"
+            android:textSize="@dimen/smaller_text_size" />
+    </FrameLayout>
+
+    <View style="@style/lineHorizontalStyle" />
+</LinearLayout>

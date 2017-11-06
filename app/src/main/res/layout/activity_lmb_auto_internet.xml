@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:id="@+id/iv_auto_wheel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/auto_chenck_ip" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="经检测，当前网络可自动获取IP地址直接联网" />
+
+    <TextView
+        android:id="@+id/tv_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="34dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

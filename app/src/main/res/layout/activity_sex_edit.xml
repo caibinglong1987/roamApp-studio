@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sex"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_sex_male"
+        style="@style/normalTextViewJumpStyleNoArrow"
+        android:layout_below="@id/id_line1"
+        android:checked="true"
+        android:clickable="true"
+        android:drawableLeft="@drawable/sex_selector"
+        android:paddingLeft="5dp"
+        android:text="男" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sex_male" />
+
+    <TextView
+        android:id="@+id/tv_sex_female"
+        style="@style/normalTextViewJumpStyleNoArrow"
+        android:layout_below="@id/id_line2"
+        android:clickable="true"
+        android:drawableLeft="@drawable/sex_selector"
+        android:paddingLeft="5dp"
+        android:text="女" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sex_female" />
+
+</RelativeLayout>

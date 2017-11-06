@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lmbaowifisetting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_roaming_box_pic" />
+
+    <TextView
+        android:id="@+id/tv_setttingtip"
+        style="@style/textviewTipStyle"
+        android:layout_below="@id/id_toplogo"
+        android:text="@string/connected_mlb_now"
+        android:textColor="@color/green" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_setttingtip"
+        android:layout_marginTop="@dimen/toplogo_margin" />
+
+    <TextView
+        android:id="@+id/tv_selectwifi"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_wifi_ssid"
+        android:text="@string/wifi_name"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/tv_selectwifiShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_selectwifi"
+        android:layout_alignRight="@+id/tv_selectwifi"
+        android:layout_alignTop="@+id/tv_selectwifi"
+        android:layout_marginRight="30dp"
+        android:enabled="true"
+        android:gravity="right|center_vertical"
+        android:hint="@string/connect_wifiname"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_selectwifi"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_wifipassword"
+        style="@style/normalEditTextStyle"
+        android:layout_below="@id/id_line2"
+        android:drawableLeft="@drawable/ic_wifi_password"
+        android:text="@string/wifi_password"
+        android:textColor="@color/text_black" />
+
+    <EditText
+        android:id="@+id/et_wifipassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_wifipassword"
+        android:layout_alignRight="@+id/tv_wifipassword"
+        android:layout_alignTop="@+id/tv_wifipassword"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:gravity="right|center_vertical"
+        android:hint="@string/input_wifipassword"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_wifipassword" />
+
+    <ImageView
+        android:id="@id/id_line4"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line3"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_bindPhone"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line4"
+        android:drawableLeft="@drawable/ic_bind_phone_number"
+        android:text="@string/lmbaonumber"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/tv_bindPhoneshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_bindPhone"
+        android:layout_alignRight="@+id/tv_bindPhone"
+        android:layout_alignTop="@+id/tv_bindPhone"
+        android:layout_marginRight="30dp"
+        android:gravity="right|center_vertical"
+        android:hint="@string/selectlmbaobindnumber"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line5"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_bindPhone" />
+
+    <Button
+        android:id="@+id/id_submit_ok"
+        style="@style/submitStyle"
+        android:layout_below="@id/id_line5"
+        android:text="@string/completed_setting" />
+
+</RelativeLayout>

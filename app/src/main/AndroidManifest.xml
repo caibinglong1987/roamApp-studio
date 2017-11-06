@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.roamtech.telephony.roamapp"
+    android:installLocation="auto">
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <!-- 短信权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!--定位服务-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+
+    <!-- Needed to allow Linphone to install on tablets, since android.permission.CALL_PHONE implies android.hardware.telephony is required -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Needed to allow Linphone to install on tablets, since android.permission.CAMERA implies android.hardware.camera and android.hardware.camera.autofocus are required -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Needed to store received images if the user wants to -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Needed to use our own Contact editor -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- Needed to route the audio to the bluetooth headset if available -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- Needed to pre fill the wizard email field (only if enabled in custom settings) -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_ALWAYS_FINISH" />
+
+    <!--银联支付权限-->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc.hce" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".application.RoamApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RDMallActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.StartActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+                <data android:scheme="sip" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sip" />
+                <data android:scheme="imto" />
+            </intent-filter>
+            <intent-filter>
+                <data android:mimeType="vnd.android.cursor.item/org.linphone.profile" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FollowActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!-- 程序主界面 -->
+        <activity
+            android:name=".LinphoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.GuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordByRegPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordByBindPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordByBindEmailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterInputPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterVerificationPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterInputPasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.LMBaoWifiActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LMBaoSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MinePhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddNewPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectWiFiActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountSafeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UnbindEmailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UnbindPhoneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MineLMBaoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LMBaoEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GlobalNetCardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyRoamNumberActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GlobalNetCardDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CouponActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyEleEvoucherActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTranslucent" />
+        <activity
+            android:name=".activity.AddGlobalNetCardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShareActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CallingActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data android:mimeType="audio/*" /> 
+                <data android:mimeType="video/*" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.ContactInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CallLogInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CallLogContactInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChattingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SendMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ChatMoreActivity"
+            android:screenOrientation="portrait" />
+        <!--android:theme="@style/AppThemeTranslucent"-->
+        <activity
+            android:name=".activity.CallAnswerActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.NameEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SexEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AreaEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CallTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectContactsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.CommunicationSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ApnSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OrderListNewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OrderDetailsNewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RedeemCodeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.linphone.IncomingCallActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="behind"
+            android:theme="@style/NoTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.linphone.InCallActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data android:mimeType="audio/*" /> 
+                <data android:mimeType="video/*" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="org.linphone.ChatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:theme="@style/NoTitle"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!--支付宝-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!--微信支付-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <!--络漫宝配置 start-->
+        <activity
+            android:name=".activity.LMBAOStatusActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBaoLinkagePagerActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAONoConfigActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOWirelessRelayActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOWiredModeActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOWiFiSetActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.LMBAOBroadbandActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.LMBAOAutoInternetEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOPhoneEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOWifiEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOPhoneSettingActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOBroadbandDialEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOWirelessRelayEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.WifiListActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name=".activity.LMBAOStaticIpActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOStaticIpEditActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOSimCardActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOAutoInternetActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOSeniorSettingActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOChannelActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOIndexActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.LMBAOSuccessfulActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--络漫宝配置 end-->
+
+        <activity
+            android:name=".activity.CallerNumberActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.CallDetailActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SearchActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.BlacklistActivity"
+            android:configChanges="keyboard|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+
+        <!--银联支付-->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!--银联支付-->
+
+        <service
+            android:name="org.linphone.LinphoneService"
+            android:label="@string/service_name"
+            android:persistent="true">
+            <intent-filter android:priority="1000">
+                <action android:name="org.linphone.LinphoneService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".server.SipService"
+            android:process=":child"/>
+
+        <receiver
+            android:name=".Receiver.ProcessReceiverOne"
+            android:process=":child" />
+        <service
+            android:name=".server.ServiceGuard"
+            android:process=":guard" />
+
+        <receiver
+            android:name=".Receiver.ProcessReceiverTwo"
+            android:process=":guard" />
+
+        <receiver android:name="org.linphone.NetworkManager">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="org.linphone.BluetoothManager"
+            android:enabled="false" />
+        <receiver android:name="org.linphone.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="org.linphone.PhoneStateChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="org.linphone.KeepAliveHandler" />
+
+        <receiver
+            android:name=".Receiver.TestReceiver"
+            android:process=":receiver" />
+        <!-- Needed for push notification -->
+        <!--<receiver-->
+        <!--android:name="org.linphone.gcm.GCMReceiver"-->
+        <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+        <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57ba63b7e0f55a955b000453" />
+
+    </application>
+
+</manifest>

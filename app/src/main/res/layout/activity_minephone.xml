@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/minephone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomlayout"
+        android:layout_below="@id/id_titlelayout" />
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        style="@style/submitBottomLayoutStyle" >
+        <LinearLayout
+            android:id="@+id/ll_addnewphone"
+            style="@style/submitBottomStyle"
+            android:background="@drawable/btn_submit_green_selecetor"
+            android:gravity="center" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:drawableLeft="@drawable/nav_add_contact"
+                android:drawablePadding="10dp"
+                android:text="@string/add_newphone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

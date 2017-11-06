@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/toplogo_margin"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_gift_box" />
+
+    <View
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_redeem_code"
+            style="@style/normalEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_rechange"
+            android:hint="@string/hint_input_code" />
+
+        <View style="@style/lineVerticalStyle" />
+
+        <ImageView
+            android:id="@+id/iv_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_capture" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalStyle" />
+
+    <Button
+        android:id="@+id/btn_exchange"
+        style="@style/submitStyle"
+        android:text="@string/redeem" />
+
+</LinearLayout>

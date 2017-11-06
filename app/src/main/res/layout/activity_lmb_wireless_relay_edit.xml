@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/layout_wifi_select"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/wifi_account" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="18dp"
+            android:text="@string/setup_wifissid_hint"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/tv_wifi_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/broadband_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="18dp"
+            android:text="@string/setup_wifipassword_hint"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_wifi_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:textColor="@color/text_black" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/btn_save_config"
+        android:textColor="@color/white" />
+
+</LinearLayout>

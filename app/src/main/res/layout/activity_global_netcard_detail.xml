@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/roam_color">
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/globalcard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <!--<TextView
+            android:id="@+id/tv_setnetcard"
+            style="@style/nav_textviewStyle"
+            android:layout_alignParentRight="true"
+            android:text="@string/setNetCard" />-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rd_card" />
+
+        <TextView
+            android:id="@+id/tv_tip_packageDescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="暂未使用任何套餐"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View style="@style/lineHorizontalStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_cardid"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="流量卡号："
+                android:textColor="@color/black"
+                android:textSize="@dimen/smaller_text_size" />
+
+            <TextView
+                android:id="@+id/tv_cardid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12321321321"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+
+        <View
+            style="@style/lineHorizontalStyle"
+            android:layout_marginLeft="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_package"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="使用套餐："
+                android:textColor="@color/black"
+                android:textSize="@dimen/smaller_text_size" />
+
+            <TextView
+                android:id="@+id/tv_first_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="德国[2016-4-26至2016-5-3]"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/smaller_text_size" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用中"
+                android:textColor="@color/roam_color"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+
+        <View
+            style="@style/lineHorizontalStyle"
+            android:layout_marginLeft="40dp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/layout_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_use_package"
+        style="@style/submitBottomLayoutStyle">
+
+        <TextView
+            android:id="@+id/tv_use_package"
+            style="@style/submitBottomStyle"
+            android:background="@drawable/btn_submit_selecetor"
+            android:gravity="center"
+            android:text="@string/use_package" />
+    </LinearLayout>
+</LinearLayout>

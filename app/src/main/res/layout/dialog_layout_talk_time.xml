@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_bg_flowsdetails"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/dialog_top_height"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/flow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/detail_on"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/flow_iv"
+            android:text="通话详情"
+            android:textColor="#0bd3a6"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="#4AD7B8"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/tv_remaintime_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="剩余时长："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_remain_talk_time"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_remaintime_title"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_remain_talk_time"
+            android:text="分钟"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:layout_marginTop="2dp"
+        android:background="@color/line_transparent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/roamChinaNumber"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_exclusive_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/data_tv"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="@color/line_transparent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/country_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="原号码接听："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/use_state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/country_tv"
+            android:text="未设置"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_rightnow_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="[立即设置]"
+            android:textColor="#0bd3a6"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="@color/line_transparent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+         android:layout_height="@dimen/dialog_height"
+         android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+        <TextView
+            android:id="@+id/tv_talktime_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="使用日期："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_talk_time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_talktime_title"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_talk_time_start"
+            android:text="至"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_talk_time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv"
+
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_remainde_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_talk_time_end">
+
+            <TextView
+                android:id="@+id/remaintime_first_tv"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="(剩余"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_talk_time_remain_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/remaintime_first_tv"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/remaintime_second_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_talk_time_remain_day"
+                android:text="天)"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lllyt_progressInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_talktime"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp" >
+
+
+<LinearLayout
+    android:id="@+id/ll_voicetalk_time"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_weight="2"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通话时长 "
+            android:textColor="#CFD1CF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_voiceremaintime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingBottom="5dp"
+            android:text="321"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 分钟"
+            android:textColor="#CFD1CF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+        <TextView
+            android:id="@+id/tv_recharge_voice_time"
+            android:textColor="#CFD1CF"
+            android:text="[充值时长]"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#88dedede" />
+
+
+
+        <TextView
+            android:id="@+id/tv_buy_excusive_num"
+            android:textColor="#CFD1CF"
+           android:gravity="center"
+            android:text="[购买专属云号码]"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"/>
+
+   <RelativeLayout
+    android:id="@+id/rl_no_exculusive_num"
+     android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1.4">
+
+    <TextView
+         android:id="@+id/tv_exclusive"
+        android:textColor="#CFD1CF"
+        android:text="专属云号码剩余"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_exclusive_num_remain_time"
+        android:layout_toRightOf="@id/tv_exclusive"
+        android:textColor="#CFD1CF"
+        android:text=""
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+
+        android:layout_toRightOf="@id/tv_exclusive_num_remain_time"
+        android:textColor="#CFD1CF"
+        android:text="天"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+         </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:background="#88dedede" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+        android:id="@+id/tv_no_available_flow"
+        android:text="暂未使用任何流量"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:textColor="#CFD1CF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_weight="2"/>
+        <TextView
+            android:id="@+id/tv_flow_to_be_effective"
+            android:text="流量套餐待生效"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:textColor="#CFD1CF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:id="@+id/ll_flow_surplus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_flow_reamin_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="流量剩余  "
+                android:layout_toLeftOf="@id/about_chat"
+                android:textColor="#CFD1CF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_trafficremaintime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_flow_remian_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text=" 天"
+                android:textColor="#CFD1CF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#88dedede" />
+
+        <TextView
+            android:id="@+id/tv_areaname"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#CFD1CF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_rightnow_buy"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:text="[充值流量]"
+            android:textColor="#CFD1CF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

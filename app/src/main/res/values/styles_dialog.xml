@@ -1,0 +1,93 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- quick option style start -->
+    <style name="quick_option_item">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:background">@drawable/btn_text_jump_selecetor</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:alpha">0.6</item>
+    </style>
+
+    <style name="chatmsg_option_item">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="quick_option_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:textColor">@color/drawer_menu_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="quick_option_dialog" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item>
+    </style>
+
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="dialog_settinglmbao">
+        <item name="android:windowBackground">@color/bg_dialog_setitnglmbao</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--parent="Theme.AppCompat.Light.Dialog-->
+    <style name="dialog_loadingStyle" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+
+    <style name="dialog_tipStyle" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 模糊 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="dialog_fullscreen" parent="dialog_tipStyle">
+        <item name="android:backgroundDimAmount">0.7</item>
+    </style>
+
+
+    <style name="dialog_card" parent="@android:style/Theme.Dialog">
+
+        <!-- 第一个是dialog的背景色，当然你可以设置图片，不拦大家 -->
+
+        <!-- 第二个就是弹出dialog后，下面的activity层的颜色啦-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--这里设置为没有标题栏，如果这里不设置的话，你会发现无论布局怎么改都会出现多一栏白色 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="dialog_fragment" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.7</item>
+        <!-- 第一个是dialog的背景色，当然你可以设置图片，不拦大家 -->
+        <item name="android:background">#ffff</item>
+        <!-- 第二个就是弹出dialog后，下面的activity层的颜色啦-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--这里设置为没有标题栏，如果这里不设置的话，你会发现无论布局怎么改都会出现多一栏白色 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+    </style>
+
+</resources>

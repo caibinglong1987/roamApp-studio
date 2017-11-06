@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主界面适配5.0以上的状态栏透明-->
+    <dimen name="fitStatusPadding">0dp</dimen>
+    <dimen name="meizufitHeight">0px</dimen>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bgcolor</item>
+        <item name="colorPrimary">@color/roam_color</item>
+        <item name="colorPrimaryDark">@color/roam_color</item>
+        <item name="colorAccent">@color/roam_color</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!--匹配v21以上状态栏透明,v21以下下无效-->
+    <style name="AppThemeTranslucent" parent="AppBaseTheme">
+    </style>
+    <style name="NoTitle" parent="AppBaseTheme" />
+    <style name="FullScreen" parent="AppBaseTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

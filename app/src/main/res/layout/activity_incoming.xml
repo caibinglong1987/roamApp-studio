@@ -1,0 +1,114 @@
+<com.roamtech.telephony.roamapp.view.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCalling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_calling"
+    android:fitsSystemWindows="true"
+    app:rb_animViewid="@+id/id_circle_image"
+    tools:context=".activity.CallAnswerActivity"
+    app:rb_color="#77B7BBC0"
+    app:rb_duration="3000"
+    app:rb_radius="56dp"
+    app:rb_rippleAmount="2"
+    app:rb_scale="3">
+
+    <com.roamtech.telephony.roamapp.view.RoundImageView
+        android:id="@id/id_circle_image"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/photo_bg_xl" />
+    <!--  app:border_inside_color="#99B7BBC0"
+            app:border_outside_color="#99D4D9DF"
+            app:border_thickness="4dp" -->
+    <TextView
+        android:id="@id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_circle_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="申景冰"
+        android:textColor="@color/white"
+        android:textSize="@dimen/larger_text_size" />
+
+    <TextView
+        android:id="@+id/tv_callingstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:text="@string/incomingcallwait"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/normal_text_size" />
+
+    <!--  <TextView
+        android:id="@+id/tv_moneysave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_callingstate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/normal_textsize"
+        android:visibility="gone" />-->
+
+
+    <ImageView
+        android:id="@+id/iv_hangupsms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_hand"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/hangup_sms_selector" />
+
+    <LinearLayout
+        android:id="@+id/ll_hand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fitbottom"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivhangup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hangup_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivaccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/callanswer_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fitbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+
+</com.roamtech.telephony.roamapp.view.RippleBackground>

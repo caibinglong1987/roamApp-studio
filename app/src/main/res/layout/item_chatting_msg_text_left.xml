@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_sendtime"
+            style="@style/chat_text_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <CheckBox
+            android:id="@+id/cbChecked"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_checkbox_contact"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/cbChecked"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_service" />
+
+        <TextView
+            android:id="@+id/tv_chatcontent"
+            style="@style/chat_content_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_userhead"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/chatfrom_bg"
+            android:minHeight="40dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_userhead"
+            android:layout_toLeftOf="@id/tv_chatcontent"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

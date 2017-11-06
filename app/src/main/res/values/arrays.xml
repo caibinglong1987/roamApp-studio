@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- do not change order without changing corresponding entry_values in non_localizable_strings.xml -->
+    <string-array name="tunnel_mode_entries">
+        <item>disabled</item>
+        <item>3G only</item>
+        <item>always</item>
+        <item>auto</item>
+    </string-array>
+    <string-array name="limit_bitrate_entries">
+        <item>10 kbits/s</item>
+        <item>15 kbits/s</item>
+        <item>20 kbits/s</item>
+        <item>36 kbits/s</item>
+        <item>64 kbits/s</item>
+        <item>128 kbits/s</item>
+    </string-array>
+</resources>

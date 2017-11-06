@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:gravity="left|top" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle" />
+
+    <TextView
+        android:id="@+id/tv_textlimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="right"
+        android:text="@string/feedback_textlimit"
+        android:textColor="@color/text_grey" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/submitStyle"
+        android:layout_marginTop="10dp"
+        android:text="@string/submit" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.roamtech.telephony.roamapp.view.HeaderLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <ImageView
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/sim_setting" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:text="@string/str_card_desc_title"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/str_card_desc_one"
+            android:textColor="@color/text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/str_card_desc_two"
+            android:textColor="@color/text_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_save_config"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="52dp"
+            android:background="@drawable/btn_start_bg"
+            android:gravity="center"
+            android:text="@string/btn_card_restart_roambox"
+            android:textColor="@color/roam_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

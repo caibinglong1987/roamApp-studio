@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/register_input_phonenumber"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/toplogo_margin"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_register" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_toplogo" />
+
+    <TextView
+        android:id="@+id/tv_conutryselect"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_area"
+        android:text="中国(+86)" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_conutryselect"
+        android:paddingLeft="40dp" />
+
+    <EditText
+        android:id="@id/tv_username"
+        style="@style/normalEditTextStyle"
+        android:layout_below="@id/id_line2"
+        android:drawableLeft="@drawable/ic_phone_number"
+        android:hint="@string/hint_register_input_phonenumber"
+        android:inputType="number" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_username" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/submitStyle"
+        android:layout_below="@id/id_line3"
+        android:text="@string/next" />
+
+</RelativeLayout>

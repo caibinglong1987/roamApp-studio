@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="套餐专属号：18698763211"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_margin_detail"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_detail_padding"
+            android:paddingTop="@dimen/item_detail_padding"
+            android:text="呼叫转移：13655718866"
+            android:textColor="@color/order_detail_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:paddingBottom="@dimen/item_detail_padding"
+            android:paddingTop="@dimen/item_detail_padding"
+            android:text="[更改设置]"
+            android:textColor="@color/roam_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="剩余时长：300分钟"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="使用日期：2016-5-1至 2016-5-7(剩余1天)"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="使用状态：使用中"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

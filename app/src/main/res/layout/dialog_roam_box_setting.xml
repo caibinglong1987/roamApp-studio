@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_roam_set"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/auto_roam_set"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_internet"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/earth_globe"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_auto_wheel"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/auto_wheel" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/load_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="124dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape__home_page_btn"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:visibility="invisible"
+            android:textColor="@color/roam_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

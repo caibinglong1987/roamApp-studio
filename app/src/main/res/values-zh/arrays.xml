@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--do not change order without changing corresponding entry_values in non_localizable_strings.xml-->
+    <string-array name="tunnel_mode_entries">
+        <item>禁用</item>
+        <item>只在3G</item>
+        <item>总是</item>
+        <item>自动</item>
+    </string-array>
+
+    <string-array name="limit_bitrate_entries">
+        <item>10 kbits/s</item>
+        <item>15 kbits/s</item>
+        <item>20 kbits/s</item>
+        <item>36 kbits/s</item>
+        <item>64 kbits/s</item>
+        <item>128 kbits/s</item>
+    </string-array>
+
+    <string-array name="permissions">
+        <item>@string/permission_recode_audio_hint</item>
+    </string-array>
+</resources>

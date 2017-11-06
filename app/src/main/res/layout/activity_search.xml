@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/roam_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="11dp"
+            android:hint="@string/content_description_search"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="-30dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/search_delete"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_focus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.roamtech.telephony.roamapp.widget.swipemenu.SwipeMenuListView
+        android:id="@+id/lv_message"
+        style="@style/listViewStyle"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_contacts"
+        style="@style/listViewStyle"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fafafa"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_prompt_content"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/search_content_message"
+            android:textColor="@color/color_828282"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

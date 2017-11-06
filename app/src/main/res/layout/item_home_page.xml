@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="115dp"
+        android:src="@drawable/image_loading"
+        android:scaleType="centerCrop"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中免商城"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="线上预订享九折优惠"
+        android:textColor="@color/text_grey"
+        android:textSize="10sp" />
+</LinearLayout>

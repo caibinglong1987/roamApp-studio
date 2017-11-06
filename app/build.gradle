@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.setup.compileSdk
+    buildToolsVersion rootProject.setup.buildTools
+
+    defaultConfig {
+        applicationId "com.roamtech.telephony.roamapp"
+        minSdkVersion rootProject.setup.minSdk
+        targetSdkVersion rootProject.setup.targetSdk
+        versionCode rootProject.setup.vcode
+        versionName rootProject.setup.vname
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard-android.txt'
+
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs =['libs']
+//        }
+//    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def oldFile = output.outputFile
+            if (variant.buildType.name.equals('release')) {
+                def releaseApkName = 'roamapp-android.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+            if (variant.buildType.name.equals('beta')) {
+                newName = oldFile.name.replace(".apk", "-v" + defaultConfig.versionName + "-build" + getDate() + ".apk")
+                output.outputFile = new File(oldFile.parent, newName)
+            }
+            if (variant.buildType.name.equals('debug')) {
+
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2048M"
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile project(':LibCommon')
+    compile project(':LibWeb')
+    compile project(':LibCoverFlow')
+    compile project(':LibMarsdaemon')
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:multidex:'
+}

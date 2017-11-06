@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_mine_top" />
+
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@+id/id_circle_image"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_default_userphoto"
+            app:border_inside_color="@color/white"
+            app:border_outside_color="#33000000"
+            app:border_thickness="4dp" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/textviewTipStyle"
+            android:layout_below="@id/id_circle_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="50dp"
+            android:text="188****1224"
+            android:textColor="@color/text_black" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:layout_marginTop="@dimen/item_jump_margintop" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_globalCard"
+                    style="@style/normalTextViewJumpStyle"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_global_card"
+                    android:text="@string/globalcard" />
+
+                <TextView
+                    android:id="@+id/tv_setApn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:text="[全球芯设置]"
+                    android:textColor="@color/roam_color"
+                    android:textSize="@dimen/small_text_size" />
+            </FrameLayout>
+
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:paddingLeft="40dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_roamnumber"
+                    style="@style/normalTextViewJumpStyle"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_lm_number"
+                    android:text="@string/roamCloudNumber" />
+
+                <TextView
+                    android:id="@+id/tv_setTransfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="[原号码接听]"
+                    android:visibility="gone"
+                    android:textColor="@color/roam_color"
+                    android:textSize="@dimen/small_text_size" />
+            </FrameLayout>
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:paddingLeft="40dp" />
+
+            <FrameLayout
+                android:id="@+id/fLayout_lmb"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_lmb"
+                    style="@style/normalTextViewJumpStyle"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/roamdata"
+                    android:text="@string/menu_lmb" />
+
+            </FrameLayout>
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:layout_marginTop="@dimen/item_jump_margintop" />
+
+            <TextView
+                android:id="@+id/tv_cardCoupon"
+                style="@style/normalTextViewJumpStyle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_card_coupon"
+                android:text="@string/cardCoupon" />
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:layout_marginTop="@dimen/item_jump_margintop" />
+
+            <TextView
+                android:id="@+id/tv_order"
+                style="@style/normalTextViewJumpStyle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/order"
+                android:text="@string/order" />
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:layout_marginTop="@dimen/item_jump_margintop" />
+
+            <TextView
+                android:id="@+id/tv_redeem_code"
+                style="@style/normalTextViewJumpStyle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_redeem_code"
+                android:text="@string/redeem_code" />
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+            <ImageView
+                style="@style/lineHorizontalSrcStyle"
+                android:layout_marginTop="@dimen/item_jump_margintop" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                style="@style/normalTextViewJumpStyle"
+                android:drawableLeft="@drawable/ic_setting"
+                android:text="@string/setting" />
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+            <!--<ImageView-->
+            <!--style="@style/lineHorizontalSrcStyle"-->
+            <!--android:layout_marginTop="@dimen/item_jump_margintop" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_wifi"-->
+            <!--style="@style/normalTextViewJumpStyle"-->
+            <!--android:drawableLeft="@drawable/ic_setting"-->
+            <!--android:text="Wifi列表" />-->
+
+            <!--<ImageView style="@style/lineHorizontalSrcStyle" />-->
+
+            <!--<ImageView-->
+            <!--style="@style/lineHorizontalSrcStyle"-->
+            <!--android:layout_marginTop="@dimen/item_jump_margintop" />-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_about"
+                    style="@style/normalTextViewJumpStyle"
+                    android:drawableLeft="@drawable/ic_about"
+                    android:text="@string/about" />
+
+                <TextView
+                    android:id="@+id/tv_appversion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="40dp"
+                    android:text="V 2.0.1"
+                    android:textColor="#888888"
+                    android:textSize="@dimen/normal_text_size" />
+            </FrameLayout>
+
+            <ImageView style="@style/lineHorizontalSrcStyle" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

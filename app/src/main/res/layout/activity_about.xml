@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/logo_login" />
+
+    <TextView
+        android:id="@+id/tv_manhua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_manhua" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_marginTop="@dimen/submit_marginTop" />
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        style="@style/normalTextViewJumpStyle"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_feedback"
+        android:text="@string/feedback" />
+
+    <RelativeLayout
+        android:id="@+id/layout_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@id/id_line2"
+            style="@style/lineHorizontalSrcStyle"
+            android:paddingLeft="40dp" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line2"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_version"
+            android:text="@string/version" />
+
+        <TextView
+            android:id="@+id/tv_newversion"
+            style="@style/float_textviewTipStyle"
+            android:layout_alignBottom="@id/tv_version"
+            android:layout_alignTop="@id/tv_version"
+            android:layout_marginRight="30dp"
+            android:text="V 2.0.1" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_userAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="漫话软件服务许可协议"
+            android:textColor="@color/green"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="络漫科技 版权所有"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright © 2015-2016 Roam-tech.All Rights Reserved"
+            android:textSize="@dimen/smaller_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

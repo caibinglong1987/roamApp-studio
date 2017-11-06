@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/verificationPhone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_phoneWarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/toplogo_margin"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:clickable="true"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/small_text_size" />
+
+    <com.jungly.gridpasswordview.GridPasswordView
+        android:id="@+id/gridPasswordView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_phoneWarm"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        app:gridColor="@color/white"
+        app:lineColor="@color/text_grey"
+        app:textColor="@color/text_black"
+        app:lineWidth="1dp"
+        app:passwordLength="6"
+        app:passwordType="numberPassword"
+        app:textSize="@dimen/larger_text_size" />
+	<TextView 
+	    android:layout_marginTop="@dimen/toplogo_margin"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@id/gridPasswordView"
+	    android:id="@+id/tv_resend_identifying_code"
+	    android:textColor="@color/and86_text_selector"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:text="@string/resend_identifying_code"
+	    android:textSize="@dimen/large_text_size"
+	    />
+</RelativeLayout>

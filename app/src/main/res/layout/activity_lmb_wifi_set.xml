@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/roam_wirelelss_connection" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:text="络漫宝连接互联网配置已完成,现在请设置络漫宝的用于设备连接的WiFi名称及密码"
+        android:textColor="@color/text_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/wifi_account" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="@string/wifi_name"
+            android:textColor="@color/text_black" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="12dp"-->
+        <!--android:text="RoamBox-"-->
+        <!--android:textColor="@color/text_grey"-->
+        <!--android:textSize="14sp" />-->
+
+        <EditText
+            android:id="@+id/et_wifi_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="RoamBox"
+            android:paddingLeft="12dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="60dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/broadband_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="@string/wifi_password"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_wifi_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/set_lmb_wifi_password"
+            android:paddingLeft="12dp"
+            android:textColorHint="@color/color_cbcece"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

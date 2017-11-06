@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@id/id_line1"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/id_titlelayout"
+            android:layout_marginTop="@dimen/item_jump_margintop" />
+
+        <TextView
+            android:id="@+id/tv_change_password"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line1"
+            android:clickable="true"
+            android:drawableLeft="@drawable/account_safe"
+            android:text="@string/changepassword" />
+
+        <ImageView
+            android:id="@id/id_line2"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_change_password" />
+
+        <ImageView
+            android:id="@id/id_line3"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/id_line2"
+            android:layout_marginTop="@dimen/item_jump_margintop" />
+
+        <TextView
+            android:id="@+id/tv_keypresssound"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line3"
+            android:clickable="true"
+            android:drawableLeft="@drawable/keypress_sound"
+            android:text="@string/presskeysound" />
+
+        <LinearLayout
+            style="@style/float_textviewTipStyle"
+            android:layout_alignBottom="@id/tv_keypresssound"
+            android:layout_alignTop="@id/tv_keypresssound"
+            android:layout_marginRight="15dp">
+
+            <com.roamtech.telephony.roamapp.view.ToggleButton
+                android:id="@+id/toggle_keypresssound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/id_line4"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_keypresssound"
+            android:paddingLeft="40dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ring"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line4"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_ring"
+            android:text="@string/ring"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/id_line5"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_ring" />
+
+        <ImageView
+            android:id="@id/id_line6"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/id_line5"
+            android:layout_marginTop="@dimen/item_jump_margintop"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_set_caller_number"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line6"
+            android:drawableLeft="@drawable/calling_number"
+            android:text="@string/set_menu_caller_number"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/id_line17"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_set_caller_number"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/id_line18"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/id_line17"
+            android:layout_marginTop="@dimen/item_jump_margintop"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_multilanguage"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line18"
+            android:drawableLeft="@drawable/ic_language"
+            android:text="@string/multilanguage"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/id_line7"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_multilanguage"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_oneclickcall"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line7"
+            android:drawableLeft="@drawable/ic_one_click_call"
+            android:text="@string/oneclickcall"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/id_line9"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_oneclickcall"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/id_line10"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/id_line9"
+            android:layout_marginTop="@dimen/item_jump_margintop" />
+
+        <TextView
+            android:id="@+id/tv_ipcallfirst"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line10"
+            android:drawableLeft="@drawable/ip_phone"
+            android:text="@string/ipcallfirst" />
+
+        <ImageView
+            android:id="@+id/id_line11"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_ipcallfirst" />
+
+        <LinearLayout
+            style="@style/float_textviewTipStyle"
+            android:layout_alignBottom="@id/tv_ipcallfirst"
+            android:layout_alignTop="@id/tv_ipcallfirst"
+            android:layout_marginRight="15dp">
+
+            <com.roamtech.telephony.roamapp.view.ToggleButton
+                android:id="@+id/toggle_ipcallfirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_agcenable"
+            style="@style/normalTextViewJumpStyle"
+            android:layout_below="@id/id_line11"
+            android:drawableLeft="@drawable/ip_phone"
+            android:text="@string/agcenable" />
+
+        <ImageView
+            android:id="@+id/id_line12"
+            style="@style/lineHorizontalSrcStyle"
+            android:layout_below="@id/tv_agcenable" />
+
+        <LinearLayout
+            style="@style/float_textviewTipStyle"
+            android:layout_alignBottom="@id/tv_agcenable"
+            android:layout_alignTop="@id/tv_agcenable"
+            android:layout_marginRight="15dp">
+
+            <com.roamtech.telephony.roamapp.view.ToggleButton
+                android:id="@+id/toggle_agcenable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/submitBottomLayoutStyle">
+
+            <TextView
+                android:id="@+id/btnExit"
+                style="@style/submitBottomStyle"
+                android:background="@drawable/btn_exit_selecetor"
+                android:gravity="center"
+                android:text="@string/exit" />
+
+        </LinearLayout>
+
+        <!--  <ImageView
+            android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_logoutProgress"
+                android:background="@drawable/loading_bg_s"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:scaleType="fitCenter"
+                android:src="@anim/chatting_send"
+                android:visibility="gone"
+                />-->
+
+        <com.roamtech.telephony.roamapp.view.ProgressBarItem
+            android:id="@+id/logoutProgress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:size="40dp"
+            app:xpos="6dp"
+            app:ypos="6dp" />
+    </RelativeLayout>
+</LinearLayout>

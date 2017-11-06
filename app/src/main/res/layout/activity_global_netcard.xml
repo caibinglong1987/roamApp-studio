@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color">
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/globalcard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tv_setnetcard"
+            style="@style/nav_textviewStyle"
+            android:layout_alignParentRight="true"
+            android:text="@string/setNetCard" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_globalcard"
+        style="@style/listViewStyle"
+        android:layout_above="@+id/llyt_AddNetCard"
+        android:layout_below="@+id/id_titlelayout" />
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rd_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/noGlobalcard"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/tvEmptyAddNetCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:text="@string/addCardNow"
+            android:textColor="@color/roam_color"
+            android:textSize="@dimen/large_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_AddNetCard"
+        style="@style/submitBottomLayoutStyle"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvAddNetCard"
+            style="@style/submitBottomStyle"
+            android:background="@drawable/btn_submit_selecetor"
+            android:gravity="center"
+            android:text="@string/addNetCard" />
+    </LinearLayout>
+
+    <com.roamtech.telephony.roamapp.view.EmptyView
+        android:id="@id/id_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_titlelayout"
+        android:background="@color/bgcolor" />
+</RelativeLayout>

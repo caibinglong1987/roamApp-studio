@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@color/linecolor"  />
+
+    <TextView
+        android:id="@+id/tv_actionsheet_item"
+        android:padding="6dp"
+        style="@style/quick_option_item" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\.name
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\roamApp-android.iml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* submodules\
+* submodules\externals\
+* submodules\externals\axmlrpc\
+* submodules\externals\axmlrpc\.git
+* submodules\externals\axmlrpc\.gitignore
+* submodules\externals\axmlrpc\LICENSE
+* submodules\externals\axmlrpc\README.md
+* submodules\externals\axmlrpc\build.xml
+* submodules\externals\axmlrpc\nbproject\
+* submodules\externals\axmlrpc\nbproject\build-impl.xml
+* submodules\externals\axmlrpc\nbproject\genfiles.properties
+* submodules\externals\axmlrpc\nbproject\project.properties
+* submodules\externals\axmlrpc\nbproject\project.xml
+* submodules\externals\axmlrpc\pom.xml
+* submodules\linphone\
+* submodules\linphone\java\
+* submodules\linphone\java\j2me\
+* submodules\linphone\java\j2me\org\
+* submodules\linphone\java\j2me\org\linphone\
+* submodules\linphone\java\j2me\org\linphone\core\
+* submodules\linphone\java\j2me\org\linphone\core\LinphoneCoreException.java
+* submodules\linphone\mediastreamer2\
+* submodules\linphone\mediastreamer2\java\
+* submodules\linphone\mediastreamer2\java\.classpath
+* submodules\linphone\mediastreamer2\java\.project
+* submodules\linphone\mediastreamer2\java\AndroidManifest.xml
+* submodules\linphone\mediastreamer2\java\build.xml
+* submodules\linphone\mediastreamer2\java\custom_rules.xml
+* submodules\linphone\mediastreamer2\java\jni\
+* submodules\linphone\mediastreamer2\java\jni\Application.mk
+* submodules\linphone\mediastreamer2\java\proguard.cfg
+* submodules\linphone\mediastreamer2\java\res\
+* submodules\linphone\mediastreamer2\java\res\drawable-hdpi\
+* submodules\linphone\mediastreamer2\java\res\drawable-hdpi\icon.png
+* submodules\linphone\mediastreamer2\java\res\drawable-ldpi\
+* submodules\linphone\mediastreamer2\java\res\drawable-ldpi\icon.png
+* submodules\linphone\mediastreamer2\java\res\drawable-mdpi\
+* submodules\linphone\mediastreamer2\java\res\drawable-mdpi\icon.png
+* submodules\linphone\mediastreamer2\java\res\layout-land\
+* submodules\linphone\mediastreamer2\java\res\layout-land\main.xml
+* submodules\linphone\mediastreamer2\java\res\layout\
+* submodules\linphone\mediastreamer2\java\res\layout\main.xml
+* submodules\linphone\mediastreamer2\java\res\menu\
+* submodules\linphone\mediastreamer2\java\res\menu\videocall_activity_menu.xml
+* submodules\linphone\mediastreamer2\java\res\values\
+* submodules\linphone\mediastreamer2\java\res\values\strings.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+gcm.jar => com.google.android.gms:play-services:+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* libs\android-async-http-1.4.9.jar => app\libs\android-async-http-1.4.9.jar
+* libs\armeabi-v7a\liblinphone-armeabi-v7a.so => app\src\main\jniLibs\armeabi-v7a\liblinphone-armeabi-v7a.so
+* libs\httpclient-4.4.1.1.jar => app\libs\httpclient-4.4.1.1.jar
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* submodules\externals\axmlrpc\src\main\java\ => app\src\main\java\
+* submodules\linphone\coreapi\help\java\ => app\src\main\java\
+* submodules\linphone\java\common\ => app\src\main\java\
+* submodules\linphone\java\common\org\linphone\core\package.html => app\src\main\resources\org\linphone\core\package.html
+* submodules\linphone\java\impl\ => app\src\main\java\
+* submodules\linphone\java\j2se\ => app\src\main\java\
+* submodules\linphone\mediastreamer2\java\src\ => app\src\main\java\
+* submodules\linphone\mediastreamer2\java\src\org\linphone\mediastream\MediastreamerActivity.java.ignored => app\src\main\resources\org\linphone\mediastream\MediastreamerActivity.java.ignored
+* show_head_toast_bg.9.PNG => show_head_toast_bg.9.png
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

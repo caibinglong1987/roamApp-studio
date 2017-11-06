@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <com.roamtech.telephony.roamapp.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@id/id_fitStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fitStatusPadding"
+        android:background="@color/roam_color_alpha" />
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_below="@id/id_fitStatus"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color_alpha">
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/qrcode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <LinearLayout
+            android:id="@+id/layout_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.roamtech.telephony.roamapp.widget.sortlist.ClearEditText
+                android:id="@+id/et_qrcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_bg_search"
+                android:drawablePadding="3dp"
+                android:hint="请手动输入条形码数字编码"
+                android:padding="5dp"
+                android:maxLines="1"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_submit_green_selecetor"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_handinput"
+            style="@style/nav_textviewStyle"
+            android:layout_alignParentRight="true"
+            android:text="@string/handinput" />
+    </RelativeLayout>
+</RelativeLayout>

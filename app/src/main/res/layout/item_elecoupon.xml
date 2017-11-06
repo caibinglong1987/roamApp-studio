@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolor"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:src="@drawable/roam_benefit" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_weight="1"
+        android:background="@drawable/long_white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_name"
+            android:padding="1.5dp"
+            android:layout_toRightOf="@id/tv_name"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:id="@+id/tv_effect_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="14dp"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/ic_detail" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_roamdata_used" />
+
+    </RelativeLayout>
+
+</LinearLayout>

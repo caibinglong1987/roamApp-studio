@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="history_date_format">MMMd日</string>
+	<string name="history_detail_date_format">EEEE MMM d HH:mm</string>
+	<string name="messages_date_format">MMMd日 HH:mm</string>
+	<string name="messages_yesterday_format">昨天 HH:mm</string>
+	<string name="today_date_format">HH:mm</string>
+	<string name="time_today_date_format">今天 HH:mm</string>
+	<string name="time_format_hh_mm_ss">HH:mm:ss</string>
+	<string name="picture_name_format">roamphone-mms-%s.jpg</string>
+
+	<string name="app_name">漫话</string>
+	<string name="service_name">漫话服务</string>
+	<string name="addressbook_label">漫话</string>
+	<string name="sync_account_type">com.roam-tech</string>
+	<string name="sync_account_name">漫话联系人</string>
+	<string name="sync_mimetype">vnd.android.cursor.item/com.roam-tech.profile</string>
+	<string name="notification_title">漫话</string>
+	<string name="wait_dialog_text">启动中</string>
+	<string name="notification_registered">注册到 %s </string>
+	<string name="notification_register_failure">注册失败 %s</string>
+	<string name="about_text">漫话 %s SIP (rfc 3261) 兼容电话</string>
+	<string name="about_link">http://www.roam-tech.com\n\n指令\nhttp://www.roam-tech.com/user-guide.html\n\n© 2015 络漫科技有限公司</string>
+
+	<string name="setup_welcome">这个助手将帮助您使用一个SIP帐户来呼叫。</string>
+	<string name="setup_create_account">在roam-tech.com上注册账户</string>
+	<string name="setup_login_linphone">登录到roam-tech.com上</string>
+	<string name="setup_login_generic">我已经有一个SIP账户</string>
+	<string name="setup_linphone_account_hint">输入你 roam-tech.com 上的用户名和密码</string>
+	<string name="setup_general_account_hint">输入你 SIP账户用户名，密码和域名</string>
+	<string name="setup_username_hint">用户名</string>
+	<string name="button_sip_contacts">SIP</string>
+
+    <string name="tunnel_host"></string>
+</resources>
+ 

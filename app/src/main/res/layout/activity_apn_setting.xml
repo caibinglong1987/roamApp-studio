@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@id/id_titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:layout_centerHorizontal="true"
+            android:background="@color/roam_color">
+
+            <Button style="@style/backbtnstyle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/setNetCard"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/apn_set_ico_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:text="插入络漫全球芯后，可能需要修改APN设置才能正常上网。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="完整操作步骤如下："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="设置->网络设置->移动网络->开启数据漫游->接入点名称（APN）->新建APN（或直接修改）->名称可任意输入，接入点名称（APN）填写或粘贴3gnet(东南亚)或dashi.cloudsim-internet(非东南亚),无需设置用户名密码->保存并启用"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="*根据机型不同，设置流程可能会有差异。"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <Button
+            android:id="@+id/btn_setApn_southeast_asia"
+            style="@style/submitStyle"
+            android:text="复制APN并前往设置-东南亚" />
+
+        <Button
+            android:id="@+id/btn_setApn_no_southeast_asia"
+            style="@style/submitStyle"
+            android:text="复制APN并前往设置-非东南亚" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*APN设置完成后仍出现无法正常上网的情况，请尝试以下操作："
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="①请尝试重启设备："
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="②设置->运营商->关闭自动选择->等待搜索完成后，选择手机主页面左上角显示的运营商->保存即可上网。"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/smaller_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

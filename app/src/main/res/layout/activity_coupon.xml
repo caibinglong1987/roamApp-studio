@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/roam_color">
+        <Button style="@style/backbtnstyle" />
+        <RadioGroup
+            android:id="@+id/rg_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checkedButton="@+id/rb_fav"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_allcallog_selector"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:text="@string/fav_coupon"
+                android:textColor="@color/tab_calllog_selector"
+                android:textSize="@dimen/normal_text_size" />
+
+            <RadioButton
+                android:id="@+id/rb_ele"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/nav_misscallog_selector"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+
+                android:text="@string/ele_coupon"
+                android:textColor="@color/tab_calllog_selector"
+                android:textSize="@dimen/normal_text_size" />
+
+        </RadioGroup>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_titlelayout"
+        android:visibility="invisible">
+
+        <ExpandableListView
+            android:id="@+id/lv_ele_coupon"
+            style="@style/listViewStyle" />
+
+        <com.roamtech.telephony.roamapp.view.EmptyView
+            android:id="@+id/eleEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_no_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_no_ticket" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="当前暂无任何可用电子券"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您可在RD商城购买上网流量及语音通话服务时选择生成电子券；"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/smaller_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电子券还可通过络漫或第三方合作商的活动获得，"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/smaller_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可任意指定账号或全球芯使用。"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@id/id_titlelayout">
+
+        <ExpandableListView
+            android:id="@+id/lv_fav_coupon"
+            style="@style/listViewStyle" />
+    </FrameLayout>
+</RelativeLayout>

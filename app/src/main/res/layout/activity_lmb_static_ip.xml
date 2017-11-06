@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/iv_lmb_broadband"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/broadband" />
+
+        <ImageView
+            android:id="@+id/iv_config_state"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignBottom="@id/iv_lmb_broadband"
+            android:layout_alignEnd="@id/iv_lmb_broadband"
+            android:layout_alignRight="@id/iv_lmb_broadband"
+            android:src="@drawable/check_ok" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="ip地址"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="192.168.1.1"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="18dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="子网掩码"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_subnet_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="255.255.255.0"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="18dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="网关"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_gateway"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="192.168.1.1"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="18dp"
+            android:background="@color/color_e0e0e0" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="DNS1"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_dns_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="8.8.8.8"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="18dp"
+        android:background="@color/color_e0e0e0" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="DNS2"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_dns_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="0.0.0.0"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/color_cbcece" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

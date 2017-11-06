@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+        <Button style="@style/backbtnstyle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/userinfo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_headphoto"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_height="96dp"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:text="@string/headphoto" />
+
+    <com.roamtech.telephony.roamapp.view.RoundImageView
+        android:id="@id/id_circle_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@id/tv_headphoto"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_headphoto"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_default_userphoto" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_headphoto" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line2"
+        android:clickable="true"
+        android:text="@string/username" />
+
+    <TextView
+        android:id="@+id/id_username_show"
+        style="@style/float_textviewTipStyle"
+        android:layout_alignBottom="@id/tv_username"
+        android:layout_alignTop="@id/tv_username"
+        android:text="朱泉峰" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_username" />
+
+    <TextView
+        android:id="@+id/tv_safelevel"
+        style="@style/float_textviewTipStyle"
+        android:layout_alignBottom="@id/tv_username"
+        android:layout_alignTop="@id/tv_username" />
+
+    <ImageView
+        android:id="@id/id_line4"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line3"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line4"
+        android:text="@string/sex" />
+
+    <TextView
+        android:id="@+id/tv_sex_show"
+        style="@style/float_textviewTipStyle"
+        android:layout_alignBottom="@id/tv_sex"
+        android:layout_alignTop="@id/tv_sex"
+        android:text="男" />
+
+    <ImageView
+        android:id="@id/id_line5"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sex" />
+
+    <TextView
+        android:id="@+id/tv_area"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line5"
+        android:text="@string/area" />
+
+    <TextView
+        android:id="@+id/tv_area_show"
+        style="@style/float_textviewTipStyle"
+        android:layout_alignBottom="@id/tv_area"
+        android:layout_alignTop="@id/tv_area"
+        android:text="浙江 杭州" />
+
+    <ImageView
+        android:id="@+id/id_line7"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_area" />
+
+</RelativeLayout>

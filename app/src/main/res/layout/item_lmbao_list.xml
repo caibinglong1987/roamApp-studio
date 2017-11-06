@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selecetor" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/item_circle_margin"
+        android:scaleType="center"
+        android:src="@drawable/ic_roaming_box_list" />
+
+    <TextView
+        android:id="@+id/tv_romanname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingTop="@dimen/item_text_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/normal_text_size" />
+
+    <TextView
+        android:id="@+id/tv_usenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingBottom="@dimen/item_text_margin"
+        android:singleLine="true"
+        android:text="使用号码："
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tv_usenumber"
+        android:paddingBottom="@dimen/item_text_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_enter_arrow" />
+
+</RelativeLayout>

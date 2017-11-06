@@ -1,0 +1,363 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_home_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_homebg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="首页背景"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_home" />
+
+    <RelativeLayout
+        android:id="@+id/rlyt_hometop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_homebg"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/iv_homebg"
+        android:paddingTop="@dimen/fitStatusPadding">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/home_margin_conner"
+            android:paddingLeft="@dimen/home_margin_conner"
+            android:paddingRight="@dimen/home_margin_conner"
+            android:paddingTop="5dp">
+
+            <com.roamtech.telephony.roamapp.view.RoundImageView
+                android:id="@+id/id_circle_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nav_user_default" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/my_global_communication"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+
+
+            <ImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:gravity="center_vertical"
+                android:src="@drawable/nav_qrcode" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rlyt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@color/transparent"
+            android:padding="10dp">
+
+            <com.roamtech.telephony.roamapp.view.RoundProgressBar
+                android:id="@+id/flowRateProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:roundColor="#A8A5AA"
+                app:roundWidth="12dip" />
+
+            <com.roamtech.telephony.roamapp.view.RoundProgressBar
+                android:id="@+id/flowRateProgress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:deviation_angle="0"
+                app:max="200"
+                app:roundColor="@android:color/transparent"
+                app:roundProgressColor="#0DD3A5"
+                app:roundWidth="22dip" />
+
+            <com.roamtech.telephony.roamapp.view.RoundProgressBar
+                android:id="@+id/flowRateProgress3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:deviation_angle="180"
+                app:max="200"
+                app:roundColor="@android:color/transparent"
+                app:roundProgressColor="#4EB9E0"
+                app:roundWidth="22dip" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_special"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_xiecheng"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:drawableTop="@drawable/nav_xiecheng"
+            android:gravity="center_horizontal"
+            android:text="携程旅行"
+            android:textColor="@color/order_detail_text_selector"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_setCommunication"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:drawableTop="@drawable/nav_set_communication"
+            android:gravity="center_horizontal"
+            android:text="@string/communication_setting"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_special"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#f6f6f6" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/view"
+            android:background="#e0e0e0" />
+
+        <LinearLayout
+            android:id="@+id/ll_hot_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/today_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="络漫"
+                    android:textColor="#0bd3a6"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/today_tv"
+                    android:text="头条"
+                    android:textColor="#0bd3a6"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/today_tv"
+                android:background="#0bd3a6" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/tv_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_actives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_homesale_back"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="活动"
+                        android:textColor="#0bd3a6"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_actives_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="1"
+                        android:text="关注络漫微信公众号，新浪微博，惊喜好礼等你拿！"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_on_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_activity"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_on_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_homesale_back"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="众筹"
+                        android:textColor="#0bd3a6"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_on_sale_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="1"
+                        android:text="淘宝众筹:体验络漫黑科技带来的互联网快感！"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_line_true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="#e0e0e0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#f6f6f6" />
+
+            <View
+                android:id="@+id/view_linefoot"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#e0e0e0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_on_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line_true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_coupons" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门活动"
+                    android:textColor="#323232"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="由漫话为您提供精选优惠"
+                    android:textColor="@color/order_detail_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <GridView
+                    android:id="@+id/grid_view_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:padding="5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <include layout="@layout/order_detail_dialog" />
+
+</RelativeLayout>

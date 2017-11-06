@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_newphone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/toplogo_margin"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_register" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_toplogo" />
+
+    <EditText
+        android:id="@+id/tv_username"
+        style="@style/normalEditTextStyle"
+        android:layout_below="@id/id_line1"
+        android:drawableLeft="@drawable/ic_username"
+        android:drawablePadding="@dimen/and86_edittext_drawablePadding"
+        android:hint="@string/hint_username"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@id/id_and86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_username"
+        android:layout_alignTop="@id/tv_username"
+        android:layout_marginLeft="@dimen/and86_marginLeft"
+        android:layout_marginRight="@dimen/and86_marginRight"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/and86"
+        android:textColor="@color/and86_text_selector"
+        android:textSize="@dimen/normal_text_size" />
+
+    <View
+        style="@style/lineVerticalStyle"
+        android:layout_alignBottom="@id/tv_username"
+        android:layout_alignTop="@id/tv_username"
+        android:layout_toRightOf="@id/id_and86" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_username"
+        android:paddingLeft="40dp" />
+
+    <EditText
+        android:id="@id/id_identifying_code"
+        style="@style/normalEditTextStyle"
+        android:layout_below="@id/id_line2"
+        android:drawableLeft="@drawable/ic_dentifying_code"
+        android:hint="@string/hint_identifying_code"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@id/id_send_identifying_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_identifying_code"
+        android:layout_alignRight="@id/id_identifying_code"
+        android:layout_alignTop="@id/id_identifying_code"
+        android:layout_marginLeft="@dimen/send_identifying_code_marginLeftAndRight"
+        android:layout_marginRight="@dimen/send_identifying_code_marginLeftAndRight"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/send_identifying_code"
+        android:textColor="@color/send_dentifying_code_text_selector"
+        android:textSize="@dimen/normal_text_size" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_identifying_code" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/submitStyle"
+        android:layout_below="@id/id_line3"
+        android:text="@string/ok" />
+
+</RelativeLayout>

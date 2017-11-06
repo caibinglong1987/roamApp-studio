@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_cdf"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/iv_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="使用期限：长期有效"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="使用次数：不限制"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_effectdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="适用范围：目前仅适用于杭州萧山机场免税店免税产品"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="使用方法：请于购物结算前向收银员出示"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_discount_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="优惠详情：免税产品烟草类98折，其他商品95折"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="结算时，请出示该优惠券"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/larger_text_size"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="*最终解释权归络漫科技所有"
+        android:textColor="@color/text_hint"
+        android:visibility="gone"
+        android:textSize="@dimen/small_text_size" />
+</LinearLayout>

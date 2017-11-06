@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/roam_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/nav_back_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.roamtech.telephony.roamapp.view.RoundImageView
+                android:id="@+id/id_circle_image"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_margin="@dimen/item_circle_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_service" />
+
+            <TextView
+                android:id="@+id/tv_call_number_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="21dp"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/send_message" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="18dp"
+            android:background="@color/color_e0e0e0" />
+
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/call_him" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e0e0e0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/layout_no_contact"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_add_new_contact"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center|left"
+            android:paddingLeft="21dp"
+            android:text="@string/addtoContact"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_e0e0e0"
+            android:paddingLeft="21dp" />
+
+        <TextView
+            android:id="@+id/tv_add_old_contact"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="21dp"
+            android:text="@string/addtoContactHaved"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_contact"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center"
+            android:paddingLeft="21dp"
+            android:text="@string/view_contact_details"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_e0e0e0"
+            android:paddingLeft="21dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/layout_blacklist"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_blacklist"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center"
+            android:paddingLeft="21dp"
+            android:text="@string/add_blacklist"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e0e0e0" />
+
+    <ListView
+        android:id="@+id/lv_call_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fitStatusPadding"
+        android:background="?attr/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/roam_color">
+
+        <Button style="@style/backbtnstyle" />
+
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@+id/id_circle_image"
+            android:layout_width="@dimen/user_icon_size"
+            android:layout_height="@dimen/user_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/home_margin_conner"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nav_user_default" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text_size" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.roamtech.telephony.roamapp.view.RDWebView
+            android:id="@+id/id_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.roamtech.telephony.roamapp.view.EmptyView
+            android:id="@+id/id_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgcolor" />
+
+    </FrameLayout>
+
+</LinearLayout>

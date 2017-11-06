@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lmbaowifisetting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@id/id_edit"
+            style="@style/nav_textviewStyle"
+            android:layout_alignParentRight="true"
+            android:text="@string/edit" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_toplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/toplogo_margin"
+        android:src="@drawable/logo_roaming_box_pic" />
+
+    <TextView
+        android:id="@+id/tv_setttingtip"
+        style="@style/textviewTipStyle"
+        android:layout_below="@id/id_toplogo"
+        android:text="当前网络连接正常"
+        android:textColor="@color/green" />
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_setttingtip"
+        android:layout_marginTop="@dimen/toplogo_margin" />
+
+    <TextView
+        android:id="@+id/tv_selectwifi"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_wifi_ssid"
+        android:text="@string/wifi_name"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/tv_selectwifiShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_selectwifi"
+        android:layout_alignRight="@+id/tv_selectwifi"
+        android:layout_alignTop="@+id/tv_selectwifi"
+        android:layout_marginRight="30dp"
+        android:gravity="right|center_vertical"
+        android:hint="@string/connect_wifiname"
+        android:text="roamingdata_01"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_selectwifi"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_wifipassword"
+        style="@style/normalEditTextStyle"
+        android:layout_below="@id/id_line2"
+        android:drawableLeft="@drawable/ic_wifi_password"
+        android:text="@string/wifi_password"
+        android:textColor="@color/text_black" />
+
+    <EditText
+        android:id="@+id/et_wifipassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_wifipassword"
+        android:layout_alignRight="@+id/tv_wifipassword"
+        android:layout_alignTop="@+id/tv_wifipassword"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:gravity="right|center_vertical"
+        android:hint="@string/input_wifipassword"
+        android:text="********"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_wifipassword" />
+
+    <ImageView
+        android:id="@id/id_line4"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line3"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_bindPhone"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line4"
+        android:drawableLeft="@drawable/ic_bind_phone_number"
+        android:text="@string/lmbaonumber"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/tv_bindPhoneshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_bindPhone"
+        android:layout_alignRight="@+id/tv_bindPhone"
+        android:layout_alignTop="@+id/tv_bindPhone"
+        android:layout_marginRight="30dp"
+        android:gravity="right|center_vertical"
+        android:hint="@string/selectlmbaobindnumber"
+        android:text="186****2688"
+        android:textColor="@color/lmbao_text_selector"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@id/id_line5"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_bindPhone" />
+
+    <LinearLayout
+        android:id="@+id/ll_unbindlmbao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_text_jump_selecetor"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:drawablePadding="10dp"
+            android:text="@string/setmainnumber"
+            android:textColor="@color/green"
+            android:textSize="@dimen/large_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

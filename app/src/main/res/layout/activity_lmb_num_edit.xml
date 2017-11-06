@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/layout_select_number"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_global_card" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_black"
+            android:text="@string/lmbaonumber" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:paddingRight="18dp"
+            android:background="@null"
+            android:maxLength="11"
+            android:text="18668242625" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/btn_save_config"
+        android:textSize="14sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_later_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="暂不操作，稍后设置"/>
+</LinearLayout>

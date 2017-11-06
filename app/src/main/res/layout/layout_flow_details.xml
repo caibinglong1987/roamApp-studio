@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_bg_flowsdetails"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dialog_top_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/flow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/detail_on"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/flow_iv"
+            android:text="流量详情"
+            android:textColor="#0bd3a6"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="#4AD7B8"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/netnumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="上网卡号："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/simis_number_tv"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/netnumber_tv"
+
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="@color/line_transparent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="使用日期："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/starttime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/data_tv"
+            android:text="2016-5-1"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/starttime_tv"
+            android:text="至"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/endtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/remaintime_first_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/endtime_tv"
+            android:text="(剩余"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/remaintime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/remaintime_first_tv"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/remaintime_second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/remaintime_tv"
+            android:text="天)"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="@color/line_transparent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dialog_marign_left">
+
+
+        <TextView
+            android:id="@+id/country_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="使用地点："
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/use_state_tv"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/country_tv"
+
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dialog_marign_left"
+        android:layout_marginRight="@dimen/dialog_marign_left"
+        android:background="@color/line_transparent"
+        />
+
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/show_homepage_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape__home_page_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="在首页展示"
+            android:textColor="#0bd3a6"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="络漫免费号：N/A"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_margin_detail"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_detail_padding"
+            android:paddingTop="@dimen/item_detail_padding"
+            android:text="剩余时长：300分钟"
+            android:textColor="@color/order_detail_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:paddingBottom="@dimen/item_detail_padding"
+            android:paddingTop="@dimen/item_detail_padding"
+            android:text="[更改设置]"
+            android:textColor="@color/roam_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/linecolor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_margin_detail"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="@dimen/item_detail_padding"
+        android:paddingTop="@dimen/item_detail_padding"
+        android:text="有效日期：轻于2016-12-30前使用完"
+        android:textColor="@color/order_detail_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

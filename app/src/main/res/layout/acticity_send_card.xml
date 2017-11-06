@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/id_titlelayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="首次下单送全球芯"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+
+
+   <ImageView
+    android:id="@+id/iv_sendcard_bg"
+    android:layout_below="@id/id_titlelayout"
+    android:src="@drawable/bg_sedncards"
+    android:scaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_free_card"
+        android:background="#0bd3a6"
+        android:layout_alignParentBottom="true"
+        android:text="我要免费领卡"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/title_text_size"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+</RelativeLayout>

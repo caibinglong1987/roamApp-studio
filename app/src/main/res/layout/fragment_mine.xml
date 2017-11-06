@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/bgcolor"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mine_top" >
+
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@id/id_circle_image"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_default_userphoto"
+            app:border_inside_color="@color/white"
+            app:border_outside_color="#33000000"
+            app:border_thickness="4dp" />
+
+        <TextView
+            android:id="@id/tv_username"
+            style="@style/textviewTipStyle"
+            android:layout_below="@id/id_circle_image"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="50dp"
+            android:text="188****1224"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_userinfo"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_mine_info"
+        android:text="@string/userinfo" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_userinfo"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_account_safe"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line2"
+        android:clickable="true"
+        android:drawableLeft="@drawable/account_safe"
+        android:text="@string/account_safe" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_account_safe" />
+	<TextView
+	    android:id="@+id/tv_safelevel"
+	    android:layout_alignTop="@id/tv_account_safe"
+	    android:layout_alignBottom="@id/tv_account_safe"
+	    style="@style/float_textviewTipStyle"
+	    />
+    <ImageView
+        android:id="@id/id_line4"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line3"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_mylmbao"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line4"
+        android:drawableLeft="@drawable/ic_mine_lmbao"
+        android:text="@string/mylmbao" />
+
+    <ImageView
+        android:id="@id/id_line5"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_mylmbao" />
+	<TextView
+	    android:id="@+id/tv_mylmbao_count"
+	    android:layout_alignTop="@id/tv_mylmbao"
+	    android:layout_alignBottom="@id/tv_mylmbao"
+	    style="@style/float_textviewTipStyle"
+	    android:text="3"
+	    />
+    <ImageView
+        android:id="@+id/id_line6"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line5"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_setting"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line6"
+        android:drawableLeft="@drawable/ic_setting"
+        android:text="@string/setting" />
+
+    <ImageView
+        android:id="@+id/id_line7"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_setting" />
+
+    <ImageView
+        android:id="@+id/id_line8"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line7"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_about"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line8"
+        android:drawableLeft="@drawable/ic_about"
+        android:text="@string/about" />
+
+    <ImageView
+        android:id="@+id/id_line9"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_about" />
+	<TextView
+	    android:id="@+id/tv_newversion"
+	    android:layout_alignTop="@id/tv_about"
+	    android:layout_alignBottom="@id/tv_about"
+	    android:layout_marginRight="15dp"
+	    style="@style/float_textviewTipStyle"
+	    android:text="V 2.0.1"
+	    android:drawableRight="@drawable/ic_find_new_version"
+	    />
+    <ImageView
+        android:id="@+id/id_line10"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_line9"
+        android:layout_marginTop="@dimen/item_jump_margintop" />
+
+    <TextView
+        android:id="@+id/tv_sharemanhua"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line10"
+        android:drawableLeft="@drawable/ic_share"
+        android:text="@string/sharemanhua" />
+
+    <ImageView
+        android:id="@+id/id_line11"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sharemanhua" />
+
+</RelativeLayout>

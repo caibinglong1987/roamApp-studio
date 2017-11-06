@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selecetor"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/bgcolor"
+        android:paddingBottom="5dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="5dip"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/normal_text_size"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@id/id_circle_image"
+            android:layout_width="@dimen/item_circle_size_small"
+            android:layout_height="@dimen/item_circle_size_small"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/item_circle_margin"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_service" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/id_circle_image"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/id_circle_image"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/item_circle_margin"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/smaller_text_size" />
+
+        <View
+            style="@style/lineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-5dp"
+            android:layout_toRightOf="@id/id_circle_image" />
+    </RelativeLayout>
+
+</LinearLayout>

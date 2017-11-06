@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/roam_hand_holding_business_card" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="18dp"
+        android:text="络漫宝上网功能已配置完成，现在请选择您要在络漫宝中使用的手机号码，开启您的全球免费漫游通话之旅！"
+        android:textColor="@color/text_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/color_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/layout_select_number"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/ic_global_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="@string/lmbaonumber"
+            android:textColor="@color/text_black" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="phone"
+            android:paddingRight="8dp"
+          />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/delete"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/roam_color"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_later_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="暂不操作，稍后设置"
+        android:visibility="gone" />
+</LinearLayout>

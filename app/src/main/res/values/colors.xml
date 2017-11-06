@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_alpha_3f">#3fffffff</color>
+    <color name="white_alpha_7f">#7fffffff</color>
+    <color name="black_alpha_33">#33000000</color>
+    <color name="black_alpha_21">#21000000</color>
+    <color name="color_80000000">#80000000</color>
+    <color name="color_858a8a">#858A8A</color>
+    <color name="color_5c6a6b">#5c6a6b</color>
+    <color name="color_444444">#444444</color>
+    <color name="color_dedede">#dedede</color>
+
+    <color name="text_black">#323232</color>
+    <color name="text_grey">#888888</color>
+    <color name="text_hint">#bbbbbb</color>
+    <color name="color_faf9f9">#FAF9F9</color>
+    <color name="color_e0e0e0">#E0E0E0</color>
+    <color name="text_blue">#00ACF9</color>
+    <color name="roam_color">#0bd3a6</color>
+    <color name="roam_color_alpha">#500bd3a6</color>
+    <color name="roam_color_alpha_99">#990bd3a6</color>
+    <color name="bgcolor">#f6f6f6</color>
+    <color name="color_949494">#949494</color>
+    <!--#d5d4d4-->
+    <color name="color_cbcece">#CBCECE</color>
+    <color name="color_c1c1c1">#C1C1C1</color>
+    <color name="linecolor">#e0e0e0</color>
+    <color name="nav_line_color">#cfcece</color>
+    <color name="tip_title_color">#436580</color>
+    <color name="pressedcolor">#E5E6E7</color>
+    <color name="disablecolor">#6C6C6C</color>
+    <color name="green">#0BD38A</color>
+    <color name="blue_dark">#327B8A</color>
+    <color name="yellow">#FDB04A</color>
+    <color name="red_dark">#ffcc0000</color>
+    <color name="color_f43531">#F43531</color>
+    <color name="color_f92a15">#F92A15</color>
+    <color name="reddark_trans">#80cc0000</color>
+    <color name="dtmf_dialer_display_text">#000000</color>
+    <color name="bg_dialog_setitnglmbao">#50000000</color>
+    <color name="order_detail_color">#888888</color>
+    <color name="search_bg_color">#e9e9e9</color>
+    <color name="color_979999">#979999</color>
+    <!--键盘的颜色-->
+    <color name="keycode_letter_normal">#ababab</color>
+    <color name="keycode_letter_press">#bbbbbb</color>
+
+    <color name="keycode_number_normal">#45bec7</color>
+    <color name="keycode_number_press">#057e87</color>
+    <color name="keyboard_bg_white">#80FFFFFF</color>
+
+    <color name="action_sheet_gray">#8F8F8F</color>
+    <color name="action_sheet_blue">#037BFF</color>
+    <color name="action_sheet_red">#FD4A2E</color>
+    <color name="color_a5a5a5">#A5A5A5</color>
+    <color name="color_fefefe">#FEFEFE</color>
+    <color name="color_a0a0a0">#a0a0a0</color>
+    
+    <color name="color_fafafa">#FAFAFA</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_798384">#798384</color>
+    <color name="color_bfbfbf">#BFBFBF</color>
+    <color name="color_cecece">#CECECE</color>
+</resources>

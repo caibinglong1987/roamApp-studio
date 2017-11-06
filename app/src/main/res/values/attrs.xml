@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <attr name="direction">
+        <enum name="rightToLeft" value="0" />
+        <enum name="bottomToTop" value="1" />
+        <enum name="leftToRight" value="2" />
+        <enum name="topToBottom" value="3" />
+    </attr>
+    
+    <declare-styleable name="SlidingDrawer">
+        <attr name="handle" format="reference" />
+        <attr name="content" format="reference" />
+        <attr name="direction" />
+    </declare-styleable>
+    
+    <declare-styleable name="AvatarWithShadow">
+        <attr name="picture" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="progressbaritem">
+        <attr name="xpos" format="dimension" />
+        <attr name="ypos" format="dimension" />
+        <attr name="size" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="card">
+        <attr name="bottomMarginTop" format="dimension" />
+        <attr name="yOffsetStep" format="dimension" />
+        <attr name="cyclic" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawShadowFrameLayout">
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowVisible" format="boolean" />
+    </declare-styleable>
+
+    <!--上拉刷新-->
+    <declare-styleable name="SwipyRefreshLayout">
+        <attr name="s_direction">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

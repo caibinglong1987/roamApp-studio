@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/frame_title_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/roam_color"
+        android:orientation="horizontal">
+
+        <com.roamtech.telephony.roamapp.view.RoundImageView
+            android:id="@+id/id_circle_image_tab"
+            android:layout_width="@dimen/user_icon_size"
+            android:layout_height="@dimen/user_icon_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/home_margin_conner"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nav_user_default" />
+
+        <RadioGroup
+            android:id="@+id/rg_callLog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:checkedButton="@+id/rb_all"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_allcallog_selector"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:text="@string/allcall"
+                android:textColor="@color/tab_calllog_selector"
+                android:textSize="@dimen/normal_text_size" />
+
+            <RadioButton
+                android:id="@+id/rb_miss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/nav_misscallog_selector"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:text="@string/missed_call"
+                android:textColor="@color/tab_calllog_selector"
+                android:textSize="@dimen/normal_text_size" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@id/id_edit"
+            style="@style/nav_textviewStyle"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.roamtech.telephony.roamapp.view.SwipyRefreshLayout
+            android:id="@+id/pullToRefreshViewMiss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.roamtech.telephony.roamapp.widget.swipemenu.SwipeMenuListView
+                android:id="@+id/lv_missedcall"
+                style="@style/listViewStyle" />
+        </com.roamtech.telephony.roamapp.view.SwipyRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlyt_calllog_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.roamtech.telephony.roamapp.view.SwipyRefreshLayout
+            android:id="@+id/pullToRefreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.roamtech.telephony.roamapp.widget.swipemenu.SwipeMenuListView
+                android:id="@+id/lv_allcall"
+                style="@style/listViewStyle" />
+        </com.roamtech.telephony.roamapp.view.SwipyRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:background="@color/keyboard_bg_white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/nav_line_color" />
+
+        <GridView
+            android:id="@+id/gv_keyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@drawable/item_keyboard_selector"
+            android:numColumns="3"
+            android:verticalSpacing="0dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/ivCall"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/dial_call_selector" />
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/dial_delete_selector" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

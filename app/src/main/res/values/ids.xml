@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="id_titlelayout" type="id"/>
+    <item name="id_toplogo" type="id"/>
+    <item name="id_titletext" type="id"/>
+    <item name="id_toback" type="id"/>
+    <item name="id_username" type="id"/>
+    <item name="id_password" type="id"/>
+    <item name="id_email" type="id"/>
+    <item name="id_line1" type="id"/>
+    <item name="id_line2" type="id"/>
+    <item name="id_line3" type="id"/>
+    <item name="id_line4" type="id"/>
+    <item name="id_line5" type="id"/>
+    <item name="id_and86" type="id"/>
+    <item name="id_identifying_code" type="id"/>
+    <item name="id_send_identifying_code" type="id"/>
+    <item name="id_submit_ok" type="id"/>
+    <item name="id_circle_image" type="id"/>
+    <item name="id_edit" type="id"/>
+    <item name="id_clean" type="id"/>
+    <item name="id_delete" type="id"/>
+    <item name="id_driverline" type="id"/>
+    <item name="id_fitStatus" type="id"/>
+    <item name="id_webView" type="id"/>
+
+    <!--SwipeItemLayout-->
+    <item name="id_handle_item" type="id"/>
+    <item name="id_contentInner_item" type="id"/>
+    <item name="id_delete_item" type="id"/>
+    <!--emptyView-->
+    <item name="id_empty_view" type="id"/>
+    <item name="id_empty_text" type="id"/>
+    <item name="id_empty_btn" type="id"/>
+</resources>

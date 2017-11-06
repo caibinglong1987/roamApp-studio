@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/id_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/roam_color" >
+
+        <Button style="@style/backbtnstyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@id/id_line1"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/id_titlelayout"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_shareweixinfriend"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line1"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_weixinfriend"
+        android:text="@string/share_weixinfriend" />
+
+    <ImageView
+        android:id="@id/id_line2"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_shareweixinfriend"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_shareweixintimeline"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line2"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_weixintimeline"
+        android:text="@string/share_weixintimeline" />
+
+    <ImageView
+        android:id="@id/id_line3"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_shareweixintimeline"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_shareqqfrinend"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line3"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_qqfriend"
+        android:text="@string/share_qqfriend" />
+
+    <ImageView
+        android:id="@id/id_line4"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_shareqqfrinend"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_shareqqzone"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line4"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_qqzone"
+        android:text="@string/share_qqzone" />
+
+    <ImageView
+        android:id="@id/id_line5"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_shareqqzone"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_sharetecentblog"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line5"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_tecent_blog"
+        android:text="@string/share_tecentweibo" />
+
+    <ImageView
+        android:id="@+id/id_line6"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sharetecentblog"
+        android:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_sharesinablog"
+        style="@style/normalTextViewJumpStyle"
+        android:layout_below="@id/id_line6"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_sina_blog"
+        android:text="@string/share_sinaweibo" />
+
+    <ImageView
+        android:id="@+id/id_line7"
+        style="@style/lineHorizontalSrcStyle"
+        android:layout_below="@id/tv_sharesinablog" />
+
+</RelativeLayout>

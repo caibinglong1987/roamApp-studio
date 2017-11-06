@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp" >
+
+    <ImageView
+        android:id="@+id/ivStateicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:padding="@dimen/item_circle_margin"
+        android:scaleType="center"
+        android:src="@drawable/ic_add_phonenumber" />
+
+    <TextView
+        android:id="@+id/tvStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/item_circle_margin"
+        android:layout_toRightOf="@+id/ivStateicon"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/small_text_size" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/item_circle_margin"
+        android:layout_toRightOf="@+id/tvStateText"
+        android:singleLine="true"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:id="@+id/ivsaveVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvTime"
+        android:scaleType="center"
+        android:src="@drawable/ic_save_voice_on" />
+
+    <TextView
+        android:id="@+id/tv_call_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:singleLine="true"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/small_text_size" />
+
+</RelativeLayout>

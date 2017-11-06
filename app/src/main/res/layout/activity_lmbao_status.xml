@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.roamtech.telephony.roamapp.view.HeaderLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage_lbm_box"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/roam_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage_lbm_box_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
